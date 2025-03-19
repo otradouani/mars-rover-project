@@ -31,19 +31,33 @@ For the example above, the program should output:
 1 3 N
 5 1 E
 ```
-## How to Compile and Run
+## How to Build and Run with Maven
+This project uses [Maven](https://maven.apache.org/) for build automation and dependency management.
 
-1. **Compile the project:**
-   ```bash
-   javac -d target src/main/java/*.java
-   ```
+### Prerequisites
 
-2. **Create the jar file:**
-   ```bash
-   jar cvfe rover.jar Main -C target .
-   ```
+- Install a JDK (not just a JRE) and set the `JAVA_HOME` environment variable appropriately.
+- Install Maven.
 
-3. **Run the program:**
-   ```bash
-   java -jar rover.jar input.txt
-   ```
+### Build and Package the Project
+
+From the project root, run the following command to clean, compile, run tests, and package the application:
+
+```bash
+mvn clean package
+```
+This will create an executable jar file named rover.jar in the target directory.
+
+## Run the Application
+Run the program from the project root using the following command:
+
+```bash
+java -jar rover.jar input.txt
+```
+Make sure that input.txt is present in the project root or provide the correct path to the input file.
+
+## Running Unit Tests
+To run the unit tests separately, execute:
+```bash
+mvn test
+```

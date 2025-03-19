@@ -1,3 +1,5 @@
+package rover;
+
 public class Rover {
     private int x;
     private int y;

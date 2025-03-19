@@ -1,3 +1,5 @@
+package rover;
+
 public class Plateau {
     private final int xMax;
     private final int yMax;
